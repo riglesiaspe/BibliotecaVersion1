@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo. Universidad Pontificia de Salamanca. Koha &rsaquo; Listas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body1">
+
+        <!-- La parte superior que incluye la barra de navegación naranja y la de color negro, esta sección quizás desaparece en un futuro -->
+    <header>
+
+        <!-- Sección header naranja-->
+        <div id="header-naranja" class="noprint">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+
+                        <!-- el logo de la pagina-->
+                        <h1 id="logo">
+                            <a class="brand" href="http://www.upsa.es" target="_blank"> 
+                               <img src="imagenes/logo.png" alt="Upsa.es" />
+                            </a>
+                        </h1>
+
+                        <!-- Los enlaces de la derecha de arriba-->
+                        <div class="enlaces-superiores">
+                              <a href="https://biblioteca.upsa.es" target="_blank">Biblioteca</a>
+                            | <a href="https://www.campusvirtual.upsa.es" target="_blank">Campus Virtual</a> 
+                            | <a href="https://mail.google.com" target="_blank">Correo</a>
+                        </div>
+
+                        <!-- El ingresar cuenta del medio-->
+                        <div id="ingresarUsuario">
+                            <ul class="nav pull-right">
+                                 <li><a class="login-link" href="https://koha.upsa.es/cgi-bin/koha/opac-user.pl">Ingresar a su cuenta</a></li>
+                            </ul>
+                        </div> 
+
+                        <!-- Lenguaje inglés o español-->
+                        <div id="changelanguage" class="pull-right">
+                            <ul class="nav">
+                                <li><a href="/cgi-bin/koha/opac-changelanguage.pl?language=en">English</a> </li>
+                                <li class="active"><p class="navbar-text">Español</p></li> 
+                            </ul> 
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- FIN Sección header naranja-->
+
+
+         <!-- Sección header negro-->
+         <!-- Primero contamos con la sección de busqueda(sección en negro)-->
+         <div id="mainSearch" class="container-fluid">
+            <div class="row-fluid">
+                <div id="opac-main-search">
+                    <div class="span12">
+                        <!-- La parte de arriba de la sección de busqueda-->
+                        
+                        <div class="mastheadsearch librarypulldown">
+                                <form name="searchform" method="get" action="/cgi-bin/koha/opac-search.pl" id="searchform" class="form-inline">
+                                    <div class="col-12 col-lg-4  pt-3">
+                                        <select name="idx" id="masthead_search" autocomplete="off">
+                                            <option value="">Catálogo de biblioteca</option>
+                                            <option value="ti">Título</option>
+                                            <option value="tik,wrdl">Título de revista</option>
+                                            <option value="au">Autor</option>
+                                            <option value="su">Tema</option>
+                                            <option value="nb">ISBN</option>
+                                            <option value="ns">ISSN</option>
+                                            <option value="se">Series</option>
+                                            <option value="callnum">Asignatura</option>
+                                        </select>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12 col-lg-4 pt-3">
+                                        <input class="transl1" id="translControl1" name="q" placeholder="Libros, libros electrónicos, revistas, revistas electrónicas, películas y mucho más…" title="Libros, libros electrónicos, revistas, revistas electrónicas, películas y mucho más…" type="text" /><span id="translControl"></span>
+                                    </div>  
+
+                                    <div class="col-12 col-lg-4 pt-3">
+                                        <div class="input-append" id="boton_buscar">
+                                            <select name="branch_group_limit" id="select_library">
+                                                <option value="">Todas las bibliotecas</option>
+                                                <option value="branch:FC">Biblioteca Campus Champagnat</option>
+                                                <option value="branch:VZ">Biblioteca Vargas-Zúñiga</option>
+                                            </select>
+
+                                            <button type="submit" id="searchsubmit" class="btn btn-primary">Buscar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                        
+                        <!-- Los tres botones de abajo de sección de busqueda en negro-->
+                        <div class="row-fluid">
+                            <div id="moresearches">
+                                <ul>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3 offset-lg-1 p-4">
+                                            <li><a href="https://koha.upsa.es/cgi-bin/koha/opac-search.pl">Búsqueda avanzada</a></li>
+                                        </div>
+                                        <div class="col-12 col-lg-2 offset-lg-1 p-4">
+                                            <li><a href="https://koha.upsa.es/cgi-bin/koha/opac-authorities-home.pl">Búsqueda de autoridad</a></li>
+                                        </div>
+                                        <div class="col-12 col-lg-3 offset-lg-1 p-4">
+                                             <li><a href="https://koha.upsa.es/cgi-bin/koha/opac-tags.pl">Nube de etiquetas</a></li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div> 
+                        </div> 
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN Sección header negro-->
+        
+    </header>
+
+
+    <!-- El cuerpo o Main donde aparecen los grados y el listado a la izquierda con url, es decir, todo lo que sale en el cuadrado blanco-->
+    <div class=" main">
+        <ul class="iniciolistas">
+            <li><a href="https://koha.upsa.es/cgi-bin/koha/opac-main.pl">Inicio</a> <span class="divider">&rsaquo;</span></li>
+            <li>Listas</li>
+        </ul> 
+
+        <!-- un contenedor que presenta todo menos el inicio listas de arriba-->
+        <div class="container-fluid" id="menugrados">
+            <div class="row-fluid">
+                <div class="row">
+                
+                    <!-- la lista de la izquierda con acceso a recursos-->
+                    <div class="col-12 col-lg-4 col-md-3 col-sm-2 ">
+                        <div class="span2">
+                            <div id="listanavegacion">
+                            
+                                <div id="opacnav">
+                                    <div id="menu">
+                                        <a href="http://biblioteca.upsa.es" target="_blank" name="Biblioteca UPSA"><img src="https://www.upsa.es/img/logos/logo-biblioteca.png" height="70" width="70"></a>
+                                        <ul>
+                                        <li><a href="http://biblioteca.upsa.es/bases-de-datos/" target="_blank">Acceso a Recursos Electrónicos desde UPSA</a></li>
+                                        <li><a href="https://ezproxy.upsa.es/login" target="_blank">Acceso Remoto a Recursos Electrónicos (fuera UPSA)</a></li>
+                                        <li><a href="https://biblioteca.upsa.es/apoyo-al-investigador/" target="_blank">Apoyo a la Investigación</a>
+                                        </li>
+                                        <li><a href="
+                                        https://biblioteca.upsa.es/servicios/prestamo-interbibliotecario/" target="_blank">Préstamo interbibliotecario</a></li>
+                                        <li><a href="mailto:biblioteca@upsa.es">Pregunte a la Biblioteca</a></li>
+                                        <li><a href="http://biblioteca.upsa.es/servicio-de-whatsapp/" target="_blank">Consulta por whatsapp</a></li>
+                                        <li><a href="https://affluences.com/biblioteca-vargas-zuniga/reservation" target="_blank">Reservas y cita previa servicios presenciales Biblioteca Vargas.</a></li>
+                                        <li><a href="https://affluences.com/biblioteca-champagnat/reservation" target="_blank">Reservas y cita previa servicios presenciales Biblioteca Champagnat.</a></li> 
+                                        <li><a href="https://forms.gle/b2ZcvtjKXMBcvDnL8" target="_blank">Servicios a domicilio.</a></li> 
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hasta aqui la lista menu de la izquierda-->
+                
+
+                    <!-- El menú principal donde van todos los grados-->
+
+                    <div class="span10 ">
+                        <div class="col-12 col-lg-4 col-md-3 col-sm-2 ">
+                            <div id="grados" class="maincontent">
+                                <h2>Grados</h2>
+                                <!-- Aqui vamos a meter todos los grados con sus url-->
+                                        <table class="table">
+
+                                            <!-- Cabecera-->
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre del Grado</th>
+                                                    <th>Número de listas</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+
+                                            <!-- cuerpo que contiene la lista con todos los grados y número de listas asociadas-->
+                                            <tbody>
+                                            
+                                            
+                                                <tr>
+                                                    <td><a href="periodismo.html">Periodismo</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="comunicacionAudiovisual.html">Comunicación Audiovisual</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Publicidad y Relaciones Públicas</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Marketing y Comunicación</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Enfermería</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Fisioterapia</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+                                            
+                                                <tr>
+                                                    <td><a href="#">Logopedia</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Psicología</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">CC. de la Actividad Física y del Deporte</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Maestro en Educación Infantil</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Maestro en Educación Primaria</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Ingeniería Informática</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><a href="#">Administración y Dirección de Empresas Tecnológicas</a></td>
+                                                    <td>20 listas</td>
+                                                    <td>
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+                                            
+
+                                            
+                                            </tbody>
+                                        </table>
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                 
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="main-bottom container-fluid">
+            <div class="row-fluid pie-de-pagina-principal">
+             <span class="information-text">Servicio de Biblioteca y Archivo de la Universidad Pontificia de Salamanca &copy; 2017</span> |
+             <span class="information-email"><a href="mailto:biblioteca@upsa.es" target="_blank">biblioteca@upsa.es</a></span> -
+             <span class="information-phone"><a href="tel:+34923277118" target="_blank"><i class="fa fa-phone"></i> 923 277 118</a></span> -
+             <span class="information-social"><a href="https://twitter.com/BibliotecaUPSA?ref_src=twsrc%5Etfw&amp;ref_url=https%3A%2F%2Fkoha.upsa.es%2F" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://www.instagram.com/bibliotecaupsa/" target="_blank"><i class="fa fa-instagram"></i></a> <a href="https://biblioteca.upsa.es/servicio-de-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></span>
+            </div>
+            </div>
+    </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+
+</html>

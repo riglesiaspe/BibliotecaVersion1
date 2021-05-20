@@ -1,0 +1,182 @@
+
+.body1{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 169, 169);
+}
+
+
+
+
+
+#header-naranja {
+background-color:#f59f2f;
+font-size: 00.85em;
+}
+
+#header-naranja .enlaces-superiores {
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    margin-right: 60px;
+}
+
+#header-naranja .enlaces-superiores a {
+    color: #FFF;
+}
+
+#header-naranja #ingresarUsuario {
+    position: absolute;
+    right: 20px;
+    margin-right:60px;
+}
+
+#ingresarUsuario a{
+    color: #FFF;
+}
+
+#header-naranja #changelanguage {
+    position: absolute;
+    right: 27px;
+    top: 60px;
+    margin-right:63px;
+}
+
+#changelanguage a{
+    color: #FFF;
+    position: absolute;
+    right: -5px;
+    top: 8px;
+    margin-right:63px;
+
+}
+
+#changelanguage li{
+    color: #FFF;
+}
+
+
+
+
+
+
+#mainSearch {
+    background-color: black;
+}
+
+#mainSearch .mastheadsearch {
+    text-align: center;
+    color: #FFF;
+}
+
+#masthead_search {
+    width: 80%;
+    height: 10%;
+}
+
+input #translControl1 {
+    border-radius: 4px! important;
+}
+
+.librarypulldown .transl1 {
+    width: 110%;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#boton_buscar  {
+    margin-left: 30px;
+    border-radius: 0px; 
+}
+#searchsubmit {
+    height: 30px;
+    font-size: small;
+}
+
+#mainSearch #moresearches {
+    margin: 0 0 .5em;
+    text-align: center;
+}
+#mainSearch #moresearches a {
+    color: #FFF;
+    fill: 5px;
+    font-size: 0.9em;
+}
+
+
+
+
+
+.main {
+height: 900px;
+background-color: white;
+margin: 20px;
+overflow: auto;
+}
+
+.iniciolistas{
+    background-color: white;
+}
+
+.iniciolistas li {
+    color: black;
+}
+
+.iniciolistas li a{
+    color: orangered;
+}
+
+#listanavegacion {
+    width: 300px;
+    border: black 5px double;
+    background-color: #f59f2f;
+    margin-bottom: 10px;
+}
+
+#menu li {
+    color: #4d4d4d;
+}
+#menu li a {
+    color: #4d4d4d;
+    background-color: transparent;
+    font-size: 100%;
+}
+
+
+
+
+
+#grados{
+    width: 850px;
+    border: black 5px double;
+    position: relative;
+}
+
+#grados th{
+    background-color: lightgray;
+}
+
+
+
+
+
+.pie-de-pagina-principal {
+    text-align: center;
+    background-color: lightgrey;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    color: #797979;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+.pie-de-pagina-principal .information-email a {
+    color: #fb9f00;
+}
+.pie-de-pagina-principal .information-phone a {
+    color: #fb9f00;
+}
+.pie-de-pagina-principal .information-social a {
+    color: #fb9f00;
+    margin-left: 5px;
+}
